@@ -46,21 +46,26 @@ const claseFor = () => {
     }
 }
 
-let responseMenu = parseInt(
-    prompt("¿Qué quieres hacer?\n1.Imprimir tu nombre\n2.¿Qué animal eres?")
-);
-
-switch(responseMenu) {
-    case 1:
-        escribeTuNombre();
-        break;
-
-    case 2:
-        perrosOGatos();
-        break;
-
-    default:
-        console.log("Opciòn errónea");
-        break;
-
+const menu = () => {
+    let responseMenu = parseInt(
+        prompt("¿Qué quieres hacer?\n1.Imprimir tu nombre\n2.¿Qué animal eres?")
+    );
+    
+    switch(responseMenu) {
+        case 1:
+            escribeTuNombre();
+            break;
+    
+        case 2:
+            perrosOGatos();
+            break;
+    
+        default:
+            console.log("Opciòn errónea");
+            break;
+    
+    }
 }
+const buttonStart = document.getElementById("button-start");
+buttonStart.addEventListener("click", menu);
+
